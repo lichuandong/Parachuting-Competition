@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Parachuting_Competition
@@ -21,7 +18,7 @@ namespace Parachuting_Competition
             control.UserEntity cuser = new control.UserEntity();
             cuser.username = textBox_uname.Text;
             cuser.password = textBox_pword.Text;
-            
+
             Model.User muser = new Model.User();
             control.UserEntity beforeUser = muser.findUser();
 
@@ -46,19 +43,24 @@ namespace Parachuting_Competition
                 return;
             }
 
-                control.UserEntity newuser = new control.UserEntity();
-                newuser.username = textBox_newuname.Text;
-                newuser.password = textBox_newpword.Text;
-               
-                if (muser.updateUser(newuser) < 0)
-                {
+            control.UserEntity newuser = new control.UserEntity();
+            newuser.username = textBox_newuname.Text;
+            newuser.password = textBox_newpword.Text;
 
-                    MessageBox.Show("修改失败");
-                    return;
-                }
+            if (muser.updateUser(newuser) < 0)
+            {
 
-                MessageBox.Show("修改成功");
-            
+                MessageBox.Show("修改失败");
+                return;
+            }
+
+            MessageBox.Show("修改成功");
+
+        }
+
+        private void ChangeInfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

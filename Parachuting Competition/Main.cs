@@ -17,17 +17,17 @@ namespace Parachuting_Competition
         {
             InitializeComponent();
         }
-       //创建运动员对象
+        //创建运动员对象
         User user = new User();
-        private void Form1_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            
+
             dataGridView_Athlete.DataSource = user.getallAthletes().Tables[0];
         }
 
         private Rectangle tabArea;
         private RectangleF tabTextArea;
-       
+
         #region 重绘TabControl
         private void tabControl_Main_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -39,10 +39,10 @@ namespace Parachuting_Competition
             sf.Alignment = StringAlignment.Center;
             Font font = this.tabControl_Main.Font;
             SolidBrush brush = new SolidBrush(Color.Black);
-            g.DrawString(((TabControl)(sender)).TabPages[e.Index].Text, font, brush, tabTextArea, sf); 
+            g.DrawString(((TabControl)(sender)).TabPages[e.Index].Text, font, brush, tabTextArea, sf);
         }
 
-        
+
 
         #endregion
 
@@ -81,40 +81,40 @@ namespace Parachuting_Competition
         //定义刷新dataGridView的方法
         private void updateData()
         {
-            
+
             dataGridView_Athlete.DataSource = user.getallAthletes().Tables[0];
         }
         //删除按钮
         private void delectbtn_Click(object sender, EventArgs e)
         {
             //得到被选中的行的集合
-              DataGridViewSelectedRowCollection selectRows = dataGridView_Athlete.SelectedRows;
-              if (selectRows.Count == 0)
-              {
-                  MessageBox.Show("请选择要删除的数据行！","注意");
-                  return;
-              }
-              else
-              {
-                  AthleteInfo athlete = new AthleteInfo();
-                  DialogResult result = MessageBox.Show("确定删除吗？", "注意", MessageBoxButtons.OKCancel);
-                  if (result == DialogResult.OK)
-                  {
-                      foreach (DataGridViewRow row in selectRows)
-                      {
+            DataGridViewSelectedRowCollection selectRows = dataGridView_Athlete.SelectedRows;
+            if (selectRows.Count == 0)
+            {
+                MessageBox.Show("请选择要删除的数据行！", "注意");
+                return;
+            }
+            else
+            {
+                AthleteInfo athlete = new AthleteInfo();
+                DialogResult result = MessageBox.Show("确定删除吗？", "注意", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    foreach (DataGridViewRow row in selectRows)
+                    {
 
-                          string number = row.Cells[1].Value.ToString();//得到队员的编号
-                          athlete.deletAthlete(number);// 通过队员的编号进行数据库的删除
-                          dataGridView_Athlete.Rows.Remove(row);
+                        string number = row.Cells[1].Value.ToString();//得到队员的编号
+                        athlete.deletAthlete(number);// 通过队员的编号进行数据库的删除
+                        dataGridView_Athlete.Rows.Remove(row);
 
-                      }
-                  }
-                  else
-                  {
-                      return;
-                  }
-                  
-              }
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
         }
         #endregion
 
@@ -135,7 +135,7 @@ namespace Parachuting_Competition
         private void searchbtn_Click(object sender, EventArgs e)
         {
             string teamname = textBox_team.Text.Trim();
-            string number=textBox_number.Text.Trim();
+            string number = textBox_number.Text.Trim();
             if (teamname == "" && number == "")
             {
                 MessageBox.Show("请至少输入一个查询条件！");
@@ -154,6 +154,9 @@ namespace Parachuting_Competition
             string name = Pointdgv.Rows[e.RowIndex].Cells[0].Value.ToString();
             MessageBox.Show(name);
         }
+
+
+
 
 
 

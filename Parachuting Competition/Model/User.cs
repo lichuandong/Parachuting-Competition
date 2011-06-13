@@ -13,9 +13,9 @@ namespace Parachuting_Competition.Model
         public int updateUser(control.UserEntity user)
         {
 
-            string sql = "UPDATE Users set Uname='"+user.username+"',Pword='"+user.password+"' where ID=2";
-          
-           return DBoperation.updateDB(sql);
+            string sql = "UPDATE Users set Uname='" + user.username + "',Pword='" + user.password + "' where ID=2";
+
+            return DBoperation.updateDB(sql);
         }
 
         //查找用户
@@ -31,7 +31,7 @@ namespace Parachuting_Competition.Model
             parms[0].Value = user.username;
 
             DataSet ds = DBoperation.ParmsQueryDB(sql, parms);
-            if (ds.Tables[0].Rows.Count!=0) //如果得到的dataset是空的
+            if (ds.Tables[0].Rows.Count != 0) //如果得到的dataset是空的
             {
                 string s = ds.Tables[0].Rows[0][2].ToString();
                 if (s.Equals(user.password))
@@ -47,7 +47,7 @@ namespace Parachuting_Competition.Model
         {
             control.UserEntity user = new control.UserEntity();
             string sql = "select * from Users";
-          
+
             DataSet ds = DBoperation.QueryDB(sql);
             user.username = ds.Tables[0].Rows[0][1].ToString();
             user.password = ds.Tables[0].Rows[0][2].ToString();

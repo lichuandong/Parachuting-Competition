@@ -91,6 +91,6 @@ namespace Parachuting_Competition.control
             get { return Scoreten; }
             set { Scoreten = value; }
         }
-             
+
     }
 }

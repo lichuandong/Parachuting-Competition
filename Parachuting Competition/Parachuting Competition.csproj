@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BD627D77-9238-4532-9EC7-C23065925A81}</ProjectGuid>
+    <ProjectGuid>{CE0CD2B5-3132-4E08-BC6C-61A316974649}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Parachuting_Competition</RootNamespace>
@@ -59,9 +59,9 @@
     <Compile Include="ChangeInfo.Designer.cs">
       <DependentUpon>ChangeInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="control\AthleteInfoEntity.cs" />
-    <Compile Include="control\PointScroeEntity.cs" />
-    <Compile Include="control\UserEntity.cs" />
+    <Compile Include="Entity\AthleteInfoEntity.cs" />
+    <Compile Include="Entity\PointScroeEntity.cs" />
+    <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +120,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="data\Parachuting Competition.accdb" />
+    <Content Include="data\Parachuting Competition.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

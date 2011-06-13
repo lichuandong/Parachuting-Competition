@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parachuting Competition", "Parachuting Competition\Parachuting Competition.csproj", "{BD627D77-9238-4532-9EC7-C23065925A81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parachuting Competition", "Parachuting Competition\Parachuting Competition.csproj", "{CE0CD2B5-3132-4E08-BC6C-61A316974649}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD627D77-9238-4532-9EC7-C23065925A81}.Debug|x86.ActiveCfg = Debug|x86
-		{BD627D77-9238-4532-9EC7-C23065925A81}.Debug|x86.Build.0 = Debug|x86
-		{BD627D77-9238-4532-9EC7-C23065925A81}.Release|x86.ActiveCfg = Release|x86
-		{BD627D77-9238-4532-9EC7-C23065925A81}.Release|x86.Build.0 = Release|x86
+		{CE0CD2B5-3132-4E08-BC6C-61A316974649}.Debug|x86.ActiveCfg = Debug|x86
+		{CE0CD2B5-3132-4E08-BC6C-61A316974649}.Debug|x86.Build.0 = Debug|x86
+		{CE0CD2B5-3132-4E08-BC6C-61A316974649}.Release|x86.ActiveCfg = Release|x86
+		{CE0CD2B5-3132-4E08-BC6C-61A316974649}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

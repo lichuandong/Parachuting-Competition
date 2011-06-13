@@ -8,7 +8,7 @@ using Parachuting_Competition.control;
 namespace Parachuting_Competition.Model
 {
     class AthleteInfo
-    { 
+    {
         //增加队员信息
         public int addAthlete(control.AthleteInfoEntity athlete)
         {
@@ -33,14 +33,14 @@ namespace Parachuting_Competition.Model
             parms[5].Value = athlete.country;
             parms[6].Value = athlete.bearer;
 
-            return DBoperation.ParmsupdateDB(sql,parms);
+            return DBoperation.ParmsupdateDB(sql, parms);
         }
 
         //通过队员的编号删除队员
         public int deletAthlete(string athnumber)
         {
             string sql = "delete from AthleteInfo where [number]=@number";
-            OleDbParameter[] parm = {new OleDbParameter("number", OleDbType.VarChar)};
+            OleDbParameter[] parm = { new OleDbParameter("number", OleDbType.VarChar) };
             parm[0].Value = athnumber;
 
             return DBoperation.ParmsupdateDB(sql, parm);
@@ -68,7 +68,7 @@ namespace Parachuting_Competition.Model
             new OleDbParameter("bearer", OleDbType.VarChar) ,
             new OleDbParameter("number", OleDbType.VarChar) 
          };
-           
+
             parms[0].Value = athlete.team;
             parms[1].Value = athlete.name;
             parms[2].Value = athlete.sex;

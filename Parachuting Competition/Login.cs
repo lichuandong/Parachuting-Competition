@@ -42,7 +42,7 @@ namespace Parachuting_Competition
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
         }
         //修改密码点击事件
         private void button_change_Click(object sender, EventArgs e)

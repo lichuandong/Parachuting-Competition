@@ -14,9 +14,9 @@ namespace Parachuting_Competition
         public delegate void myEvent();//定义委托，用来接收事件
         public event myEvent myevent;//定义与myEvent委托相关的事件
 
-        string athleteid="";
+        string athleteid = "";
         public AddAthlete(string id)
-        {  
+        {
             InitializeComponent();// 系统初始化构件
             athleteid = id;
             if (athleteid != "")
@@ -51,17 +51,17 @@ namespace Parachuting_Competition
                 comboBox_Bearer.SelectedIndex = 0;
                 comboBox_Sex.SelectedIndex = 0;
             }
-          
+
         }
 
-  
+
         private void button_Add_Click(object sender, EventArgs e)
         {
             control.AthleteInfoEntity Cathlete = new control.AthleteInfoEntity();
             string s = textBox_Name.Text.Trim();
 
             //判空
-            if (textBox_Number.Text.Trim() == "" || textBox_Team.Text.Trim() == "" || textBox_Name.Text.Trim() == "" 
+            if (textBox_Number.Text.Trim() == "" || textBox_Team.Text.Trim() == "" || textBox_Name.Text.Trim() == ""
                 || textBox_Country.Text.Trim() == "" || textBox_Age.Text.Trim() == "")
             {
 
@@ -88,7 +88,7 @@ namespace Parachuting_Competition
             }
             else  // 这是修改后的
             {
-                if (Mathlete.updataAthlete(Cathlete)>0)
+                if (Mathlete.updataAthlete(Cathlete) > 0)
                 {
                     this.Close();
 
@@ -111,7 +111,7 @@ namespace Parachuting_Competition
 
                 myevent();
             }
-            
+
         }
 
         #region 只能输入数字处理
@@ -143,8 +143,8 @@ namespace Parachuting_Competition
 
         }
 
-      
 
-      
+
+
     }
 }
