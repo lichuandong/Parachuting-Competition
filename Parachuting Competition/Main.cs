@@ -96,10 +96,9 @@ namespace Parachuting_Competition
             {
                 AthleteInfo athlete = new AthleteInfo();
                 string number = dataGridView_Athlete.SelectedCells[1].Value.ToString();//得到队员的编号
-                AddAthlete addAthlete = new AddAthlete(number);
+                AddAthlete addAthlete = new AddAthlete(number);// 修改队员信息，传一个队员编号过去，然后好通过编号找到该队员信息，并展示出来
+                addAthlete.Text = "修改选手信息";
                 addAthlete.Show();
-
-                
             }
         }
 
