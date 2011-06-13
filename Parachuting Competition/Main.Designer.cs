@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.updatabtn = new System.Windows.Forms.Button();
             this.delectbtn = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.dataGridView_Athlete = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.年龄 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +52,9 @@
             this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bearer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updatabtn = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Athlete)).BeginInit();
@@ -94,6 +94,16 @@
             this.tabPage1.Text = "队员录入";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // updatabtn
+            // 
+            this.updatabtn.Location = new System.Drawing.Point(87, 3);
+            this.updatabtn.Name = "updatabtn";
+            this.updatabtn.Size = new System.Drawing.Size(75, 23);
+            this.updatabtn.TabIndex = 3;
+            this.updatabtn.Text = "修改";
+            this.updatabtn.UseVisualStyleBackColor = true;
+            this.updatabtn.Click += new System.EventHandler(this.updatabtn_Click);
+            // 
             // delectbtn
             // 
             this.delectbtn.Location = new System.Drawing.Point(168, 3);
@@ -122,14 +132,14 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Athlete.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Athlete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Athlete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Athlete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Athlete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -143,21 +153,98 @@
             this.dataGridView_Athlete.Location = new System.Drawing.Point(3, 32);
             this.dataGridView_Athlete.Name = "dataGridView_Athlete";
             this.dataGridView_Athlete.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Athlete.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView_Athlete.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Athlete.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Athlete.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_Athlete.RowTemplate.Height = 23;
             this.dataGridView_Athlete.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Athlete.Size = new System.Drawing.Size(648, 379);
             this.dataGridView_Athlete.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // number
+            // 
+            this.number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.number.DataPropertyName = "number";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.number.DefaultCellStyle = dataGridViewCellStyle2;
+            this.number.HeaderText = "编号";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            // 
+            // 年龄
+            // 
+            this.年龄.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.年龄.DataPropertyName = "age";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.年龄.DefaultCellStyle = dataGridViewCellStyle3;
+            this.年龄.HeaderText = "年龄";
+            this.年龄.Name = "年龄";
+            this.年龄.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "athname";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.name.DefaultCellStyle = dataGridViewCellStyle4;
+            this.name.HeaderText = "姓名";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // team
+            // 
+            this.team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.team.DataPropertyName = "team";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.team.DefaultCellStyle = dataGridViewCellStyle5;
+            this.team.HeaderText = "队别";
+            this.team.Name = "team";
+            this.team.ReadOnly = true;
+            // 
+            // sex
+            // 
+            this.sex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sex.DataPropertyName = "sex";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.sex.DefaultCellStyle = dataGridViewCellStyle6;
+            this.sex.HeaderText = "性别";
+            this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
+            // 
+            // country
+            // 
+            this.country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.country.DataPropertyName = "country";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.country.DefaultCellStyle = dataGridViewCellStyle7;
+            this.country.HeaderText = "国家";
+            this.country.Name = "country";
+            this.country.ReadOnly = true;
+            // 
+            // bearer
+            // 
+            this.bearer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bearer.DataPropertyName = "bearer";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.bearer.DefaultCellStyle = dataGridViewCellStyle8;
+            this.bearer.HeaderText = "记名";
+            this.bearer.Name = "bearer";
+            this.bearer.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -188,93 +275,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "打印预览";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // number
-            // 
-            this.number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.number.DataPropertyName = "number";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.number.DefaultCellStyle = dataGridViewCellStyle12;
-            this.number.HeaderText = "编号";
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            // 
-            // 年龄
-            // 
-            this.年龄.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.年龄.DataPropertyName = "age";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.年龄.DefaultCellStyle = dataGridViewCellStyle13;
-            this.年龄.HeaderText = "年龄";
-            this.年龄.Name = "年龄";
-            this.年龄.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "athname";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.name.DefaultCellStyle = dataGridViewCellStyle14;
-            this.name.HeaderText = "姓名";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // team
-            // 
-            this.team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.team.DataPropertyName = "team";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.team.DefaultCellStyle = dataGridViewCellStyle15;
-            this.team.HeaderText = "队别";
-            this.team.Name = "team";
-            this.team.ReadOnly = true;
-            // 
-            // sex
-            // 
-            this.sex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sex.DataPropertyName = "sex";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.sex.DefaultCellStyle = dataGridViewCellStyle16;
-            this.sex.HeaderText = "性别";
-            this.sex.Name = "sex";
-            this.sex.ReadOnly = true;
-            // 
-            // country
-            // 
-            this.country.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.country.DataPropertyName = "country";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.country.DefaultCellStyle = dataGridViewCellStyle17;
-            this.country.HeaderText = "国家";
-            this.country.Name = "country";
-            this.country.ReadOnly = true;
-            // 
-            // bearer
-            // 
-            this.bearer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bearer.DataPropertyName = "bearer";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.bearer.DefaultCellStyle = dataGridViewCellStyle18;
-            this.bearer.HeaderText = "记名";
-            this.bearer.Name = "bearer";
-            this.bearer.ReadOnly = true;
-            // 
-            // updatabtn
-            // 
-            this.updatabtn.Location = new System.Drawing.Point(87, 3);
-            this.updatabtn.Name = "updatabtn";
-            this.updatabtn.Size = new System.Drawing.Size(75, 23);
-            this.updatabtn.TabIndex = 3;
-            this.updatabtn.Text = "修改";
-            this.updatabtn.UseVisualStyleBackColor = true;
-            this.updatabtn.Click += new System.EventHandler(this.updatabtn_Click);
             // 
             // Main
             // 
