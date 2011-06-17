@@ -26,3 +26,16 @@ F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\De
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Properties.Resources.resources
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.read.1.tlog
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe.config
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.exe
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.pdb
+D:\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe
+D:\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.pdb
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.AddAthlete.resources
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.ChangeInfo.resources
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Login.resources
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Main.resources
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Properties.Resources.resources
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.write.1.tlog
