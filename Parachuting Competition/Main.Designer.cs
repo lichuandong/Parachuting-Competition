@@ -325,10 +325,10 @@
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.textBox_team);
             this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 21);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(669, 422);
+            this.tabPage5.Size = new System.Drawing.Size(669, 423);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "个人定点";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -355,6 +355,7 @@
             // 
             // Pointdgv
             // 
+            this.Pointdgv.AllowUserToAddRows = false;
             this.Pointdgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -386,7 +387,7 @@
             this.Pointdgv.Name = "Pointdgv";
             this.Pointdgv.RowTemplate.Height = 23;
             this.Pointdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Pointdgv.Size = new System.Drawing.Size(669, 363);
+            this.Pointdgv.Size = new System.Drawing.Size(669, 364);
             this.Pointdgv.TabIndex = 5;
             this.Pointdgv.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.Pointdgv_CellValidating);
             // 
@@ -405,7 +406,6 @@
             this.Column13.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column13.HeaderText = "编号";
             this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
             // 
             // Column1
             // 
@@ -415,7 +415,6 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column1.HeaderText = "姓名";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -425,7 +424,6 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column2.HeaderText = "队名";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -563,20 +561,20 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 21);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(669, 422);
+            this.tabPage6.Size = new System.Drawing.Size(669, 423);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "个人特技";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 21);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(669, 422);
+            this.tabPage7.Size = new System.Drawing.Size(669, 423);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;

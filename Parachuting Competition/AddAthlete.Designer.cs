@@ -127,7 +127,6 @@
             this.textBox_Number.Size = new System.Drawing.Size(100, 21);
             this.textBox_Number.TabIndex = 15;
             this.textBox_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Number_KeyPress);
-           
             // 
             // label_Bearer
             // 
@@ -223,6 +222,7 @@
             this.MaximizeBox = false;
             this.Name = "AddAthlete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.AddAthlete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

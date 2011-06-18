@@ -145,8 +145,10 @@ namespace Parachuting_Competition
             }
             return true;
         }
-        PointScore point = new PointScore();
-        PointScroeEntity pointscroe = new PointScroeEntity();
+
+        private PointScore point = new PointScore();
+        private PointScroeEntity pointscroe = new PointScroeEntity();
+        private DataSet ds;//更新的时候必须用到datagridview的数据源dataset
         private void searchbtn_Click(object sender, EventArgs e)
         {
           
@@ -156,7 +158,7 @@ namespace Parachuting_Competition
                 pointscroe.Teamname1 = teamname;
                 pointscroe.Number1 = athnumber;
               
-                DataSet ds = point.findathletes(pointscroe);
+                 ds = point.findathletes(pointscroe);
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     Pointdgv.DataSource = ds.Tables[0];
@@ -166,13 +168,8 @@ namespace Parachuting_Competition
                     MessageBox.Show("没找到数据！");
                     return;
                 }
-
-
             }
-            else 
-            {
-                return;
-            }
+
        }
         
             
@@ -184,7 +181,7 @@ namespace Parachuting_Competition
         {
           
              
-               int i= point.updataTable();
+               int i= point.updataTable(ds);
                if (i > 0)
                {
                    MessageBox.Show("更新成功！");
@@ -201,7 +198,7 @@ namespace Parachuting_Competition
 
         private void Pointdgv_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            
+            if (e.ColumnIndex != 1 && e.ColumnIndex != 2 && e.ColumnIndex != 3)
                 try
                 {
                     if (String.IsNullOrEmpty(e.FormattedValue.ToString()))

@@ -29,7 +29,13 @@ namespace Parachuting_Competition.Model
         public string sql;
         public DataSet findathletes(PointScroeEntity pointentity)
         {
-            sql = "select * from Fixpoint where Teamname=@Teamname or [Number]=@Number";
+            sql = "select * from Fixpoint where Teamname=@Teamname and [Number]=@Number";
+            if (pointentity.Teamname1 == "" || pointentity.Number1 == "")
+            {
+
+                sql = "select * from Fixpoint where Teamname=@Teamname or [Number]=@Number";
+            }
+            
             OleDbParameter[] parms = 
             { 
                new OleDbParameter("Teamname",OleDbType.VarChar),
@@ -40,11 +46,12 @@ namespace Parachuting_Competition.Model
             return DBoperation.ParmsQueryDB(sql, parms);
         }
 
-        public int updataTable()
+        //将datagridview中更改的数据同步到数据库
+        public int updataTable(DataSet ds)
         {
-            sql = "select * from Fixpoint ";
+            sql = "select * from Fixpoint ";//主要用来确定更新那张数据表，比如这里是Fixpoint这张表
            
-            return DBoperation.updateTable(sql);
+            return DBoperation.updateTable(ds,sql);
 
         }
     }

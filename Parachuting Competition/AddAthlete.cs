@@ -176,6 +176,11 @@ namespace Parachuting_Competition
             this.Close();
         }
 
+        private void AddAthlete_Load(object sender, EventArgs e)
+        {
+
+        }
+
       
 
     

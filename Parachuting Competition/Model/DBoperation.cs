@@ -85,21 +85,28 @@ namespace Parachuting_Competition.Model
             return ds;
         }
 
-        public static int updateTable(string cmdText)
+        //将datagridview中更改的数据同步到数据库
+        public static int updateTable(DataSet ds,string sql)
         {
            
             connectionString.Close();
             connectionString.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = connectionString;
-            cmd.CommandText = cmdText;
+            cmd.CommandText = sql;
 
-           
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            OleDbCommandBuilder com = new OleDbCommandBuilder(da);
+  
+            OleDbCommandBuilder com = new OleDbCommandBuilder(da);//自动生成跟新语句
+
+
+
+           //这种更新必须用到原来datagrideview的datasource的数据源dataset，
+            //因为在datagrideview中更改数据时同时更改了其datasource数据源的dataset，
+            //在此就是利用更改后的dataset，更新数据库
             return da.Update(ds);
+
+            
         }
     }
 }
