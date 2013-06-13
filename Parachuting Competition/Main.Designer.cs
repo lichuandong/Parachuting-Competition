@@ -38,9 +38,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             this.tabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.updatabtn = new System.Windows.Forms.Button();
@@ -58,6 +61,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -82,6 +86,8 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewButtonColumn();
+=======
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             this.tabControl_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Athlete)).BeginInit();
@@ -279,7 +285,10 @@
             // 
             // tabPage2
             // 
+<<<<<<< HEAD
             this.tabPage2.Controls.Add(this.tabControl1);
+=======
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             this.tabPage2.Location = new System.Drawing.Point(104, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -307,6 +316,7 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "打印预览";
             this.tabPage4.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             // 
             // tabControl1
             // 
@@ -536,6 +546,8 @@
             this.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column14.Text = "修改";
             this.Column14.UseColumnTextForButtonValue = true;
+=======
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             // 
             // Main
             // 

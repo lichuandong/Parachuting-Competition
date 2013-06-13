@@ -11,7 +11,10 @@ namespace Parachuting_Competition
 {
     public partial class AddAthlete : Form
     {
-       string athleteid="";
+        public delegate void myEvent();//定义委托，用来接收事件
+        public event myEvent myevent;//定义与myEvent委托相关的事件
+
+        string athleteid="";
         public AddAthlete(string id)
         {  
             InitializeComponent();// 系统初始化构件
@@ -51,13 +54,7 @@ namespace Parachuting_Competition
           
         }
 
-        private void label_Name_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     
-
+  
         private void button_Add_Click(object sender, EventArgs e)
         {
             control.AthleteInfoEntity Cathlete = new control.AthleteInfoEntity();
@@ -93,7 +90,7 @@ namespace Parachuting_Competition
             {
                 if (Mathlete.updataAthlete(Cathlete)>0)
                 {
-                    MessageBox.Show("修改成功！");
+                    this.Close();
 
                 }
                 else
@@ -107,6 +104,13 @@ namespace Parachuting_Competition
             textBox_Name.Clear();
             textBox_Number.Clear();
             textBox_Team.Clear();
+
+            //调用添加刷新dataGridView方法之后的事件，利用它间接调用main窗体中的update方法
+            if (myevent != null)
+            {
+
+                myevent();
+            }
             
         }
 
@@ -132,6 +136,11 @@ namespace Parachuting_Competition
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddAthlete_Load(object sender, EventArgs e)
+        {
+
         }
 
       

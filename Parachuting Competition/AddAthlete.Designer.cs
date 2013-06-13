@@ -75,7 +75,7 @@
             this.label_Name.Size = new System.Drawing.Size(47, 19);
             this.label_Name.TabIndex = 2;
             this.label_Name.Text = "姓名";
-            this.label_Name.Click += new System.EventHandler(this.label_Name_Click);
+       
             // 
             // label_Sex
             // 
@@ -86,7 +86,7 @@
             this.label_Sex.Size = new System.Drawing.Size(47, 19);
             this.label_Sex.TabIndex = 2;
             this.label_Sex.Text = "性别";
-            this.label_Sex.Click += new System.EventHandler(this.label_Name_Click);
+        
             // 
             // label_age
             // 
@@ -97,7 +97,7 @@
             this.label_age.Size = new System.Drawing.Size(47, 19);
             this.label_age.TabIndex = 2;
             this.label_age.Text = "年龄";
-            this.label_age.Click += new System.EventHandler(this.label_Name_Click);
+           
             // 
             // label_country
             // 
@@ -108,7 +108,7 @@
             this.label_country.Size = new System.Drawing.Size(47, 19);
             this.label_country.TabIndex = 2;
             this.label_country.Text = "国家";
-            this.label_country.Click += new System.EventHandler(this.label_Name_Click);
+            
             // 
             // label_Bearer
             // 
@@ -119,7 +119,7 @@
             this.label_Bearer.Size = new System.Drawing.Size(47, 19);
             this.label_Bearer.TabIndex = 2;
             this.label_Bearer.Text = "记名";
-            this.label_Bearer.Click += new System.EventHandler(this.label_Name_Click);
+            
             // 
             // textBox_Number
             // 
@@ -227,7 +227,12 @@
             this.MaximizeBox = false;
             this.Name = "AddAthlete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+<<<<<<< HEAD
           
+=======
+            this.Text = "添加选手";
+            this.Load += new System.EventHandler(this.AddAthlete_Load);
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             this.ResumeLayout(false);
             this.PerformLayout();
 

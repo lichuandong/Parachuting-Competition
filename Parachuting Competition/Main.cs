@@ -18,9 +18,10 @@ namespace Parachuting_Competition
             InitializeComponent();
         }
        //创建运动员对象
+        User user = new User();
         private void Form1_Load(object sender, EventArgs e)
         {
-            User user=new User();
+            
             dataGridView_Athlete.DataSource = user.getallAthletes().Tables[0];
         }
 
@@ -45,15 +46,45 @@ namespace Parachuting_Competition
 
         #endregion
 
-       
+        #region 添加，删除，修改按钮
+        //添加按钮
         private void button_Add_Click(object sender, EventArgs e)
         {
             // 点击添加，传一个空字符串
             AddAthlete addAthlete = new AddAthlete("");
+<<<<<<< HEAD
             addAthlete.Text = "添加选手";
+=======
+            //将刷新dataGridView的方法加到addAthlete对象的委托事件中
+            addAthlete.myevent += new AddAthlete.myEvent(updateData);
+>>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
             addAthlete.Show();
         }
-
+        //修改按钮
+        private void updatabtn_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection selectRows = dataGridView_Athlete.SelectedRows;
+            if (selectRows.Count == 0)
+            {
+                MessageBox.Show("请选择要修改的数据！");
+            }
+            else
+            {
+                AthleteInfo athlete = new AthleteInfo();
+                string number = dataGridView_Athlete.SelectedCells[1].Value.ToString();//得到队员的编号
+                AddAthlete addAthlete = new AddAthlete(number);// 修改队员信息，传一个队员编号过去，然后好通过编号找到该队员信息，并展示出来
+                addAthlete.Text = "修改选手信息";
+                addAthlete.myevent += new AddAthlete.myEvent(updateData);
+                addAthlete.Show();
+            }
+        }
+        //定义刷新dataGridView的方法
+        private void updateData()
+        {
+            
+            dataGridView_Athlete.DataSource = user.getallAthletes().Tables[0];
+        }
+        //删除按钮
         private void delectbtn_Click(object sender, EventArgs e)
         {
             //得到被选中的行的集合
@@ -85,23 +116,9 @@ namespace Parachuting_Competition
                   
               }
         }
+        #endregion
 
-        private void updatabtn_Click(object sender, EventArgs e)
-        {
-            DataGridViewSelectedRowCollection selectRows = dataGridView_Athlete.SelectedRows;
-            if (selectRows.Count == 0)
-            {
-                MessageBox.Show("请选择要修改的数据！");
-            }
-            else
-            {
-                AthleteInfo athlete = new AthleteInfo();
-                string number = dataGridView_Athlete.SelectedCells[1].Value.ToString();//得到队员的编号
-                AddAthlete addAthlete = new AddAthlete(number);// 修改队员信息，传一个队员编号过去，然后好通过编号找到该队员信息，并展示出来
-                addAthlete.Text = "修改选手信息";
-                addAthlete.Show();
-            }
-        }
+
 
         private void textBox_number_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -140,8 +157,6 @@ namespace Parachuting_Competition
 
 
 
-       
 
-  
     }
 }
