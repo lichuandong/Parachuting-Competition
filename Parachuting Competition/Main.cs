@@ -52,12 +52,12 @@ namespace Parachuting_Competition
         {
             // 点击添加，传一个空字符串
             AddAthlete addAthlete = new AddAthlete("");
-<<<<<<< HEAD
+
             addAthlete.Text = "添加选手";
-=======
+
             //将刷新dataGridView的方法加到addAthlete对象的委托事件中
             addAthlete.myevent += new AddAthlete.myEvent(updateData);
->>>>>>> ac11f83afda2476f8abdc20266a5a7f3cc816c41
+
             addAthlete.Show();
         }
         //修改按钮
