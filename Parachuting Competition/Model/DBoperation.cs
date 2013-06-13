@@ -28,16 +28,16 @@ namespace Parachuting_Competition.Model
         //带参数的更新数据库（增加、删除、更新）
          public static int ParmsupdateDB(string cmdText, OleDbParameter[] cmdParms)
          {
-             connectionString.Close();
-             connectionString.Open();
-             OleDbCommand cmd = new OleDbCommand();
-             cmd.Connection = connectionString;
-             cmd.CommandText = cmdText;
-             PrepareCommand(cmd, cmdParms);
-             //cmd.Parameters.Clear();
-             return cmd.ExecuteNonQuery();
              
-         }
+                 connectionString.Close();
+                 connectionString.Open();
+                 OleDbCommand cmd = new OleDbCommand();
+                 cmd.Connection = connectionString;
+                 cmd.CommandText = cmdText;
+                 PrepareCommand(cmd, cmdParms);
+                 //cmd.Parameters.Clear();
+                 return cmd.ExecuteNonQuery();
+          }
 
          //不带参数的更新数据库（增加、删除、更新）
          public static int updateDB(string cmdText)

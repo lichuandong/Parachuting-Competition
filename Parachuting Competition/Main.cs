@@ -48,8 +48,9 @@ namespace Parachuting_Competition
        
         private void button_Add_Click(object sender, EventArgs e)
         {
-            
+            // 点击添加，传一个空字符串
             AddAthlete addAthlete = new AddAthlete("");
+            addAthlete.Text = "添加选手";
             addAthlete.Show();
         }
 
@@ -100,6 +101,41 @@ namespace Parachuting_Competition
                 addAthlete.Text = "修改选手信息";
                 addAthlete.Show();
             }
+        }
+
+        private void textBox_number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtlimit(textBox_number, e);
+        }
+        //文本框限制输入数字的规则
+        private void txtlimit(Control c, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46)
+                e.Handled = true;
+
+        }
+
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            string teamname = textBox_team.Text.Trim();
+            string number=textBox_number.Text.Trim();
+            if (teamname == "" && number == "")
+            {
+                MessageBox.Show("请至少输入一个查询条件！");
+                return;
+            }
+            else
+            {
+                int athleteid = Int32.Parse(number);
+
+            }
+        }
+
+        private void Pointdgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            string name = Pointdgv.Rows[e.RowIndex].Cells[0].Value.ToString();
+            MessageBox.Show(name);
         }
 
 

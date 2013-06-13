@@ -68,7 +68,7 @@ namespace Parachuting_Competition.Model
             new OleDbParameter("bearer", OleDbType.VarChar) ,
             new OleDbParameter("number", OleDbType.VarChar) 
          };
-
+           
             parms[0].Value = athlete.team;
             parms[1].Value = athlete.name;
             parms[2].Value = athlete.sex;

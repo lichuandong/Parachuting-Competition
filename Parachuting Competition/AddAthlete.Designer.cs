@@ -227,8 +227,7 @@
             this.MaximizeBox = false;
             this.Name = "AddAthlete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "添加选手";
-        
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 

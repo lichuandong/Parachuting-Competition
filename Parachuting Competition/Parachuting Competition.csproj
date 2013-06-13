@@ -60,6 +60,7 @@
       <DependentUpon>ChangeInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="control\AthleteInfoEntity.cs" />
+    <Compile Include="control\PointScroeEntity.cs" />
     <Compile Include="control\UserEntity.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -75,6 +76,7 @@
     </Compile>
     <Compile Include="Model\AthleteInfo.cs" />
     <Compile Include="Model\DBoperation.cs" />
+    <Compile Include="Model\PointScroe.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

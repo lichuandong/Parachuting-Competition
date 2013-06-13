@@ -91,7 +91,7 @@ namespace Parachuting_Competition
             }
             else  // 这是修改后的
             {
-                if (Mathlete.updataAthlete(Cathlete) > 0)
+                if (Mathlete.updataAthlete(Cathlete)>0)
                 {
                     MessageBox.Show("修改成功！");
 
@@ -133,6 +133,8 @@ namespace Parachuting_Competition
         {
             this.Close();
         }
+
+      
 
       
     }
