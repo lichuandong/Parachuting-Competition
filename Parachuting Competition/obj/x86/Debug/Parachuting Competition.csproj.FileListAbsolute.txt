@@ -12,3 +12,17 @@ C:\Documents and Settings\B413\桌面\Parachuting Competition\Parachuting Compet
 C:\Documents and Settings\B413\桌面\Parachuting Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.exe
 C:\Documents and Settings\B413\桌面\Parachuting Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.pdb
 C:\Documents and Settings\B413\桌面\Parachuting Competition\Parachuting Competition\bin\Debug\data\Parachuting Competition.accdb
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe.config
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.exe
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.pdb
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\data\Parachuting Competition.accdb
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.pdb
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.AddAthlete.resources
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.ChangeInfo.resources
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Login.resources
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Main.resources
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting_Competition.Properties.Resources.resources
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -148,12 +148,7 @@ namespace Parachuting_Competition
             }
         }
 
-        private void Pointdgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            string name = Pointdgv.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MessageBox.Show(name);
-        }
+       
 
 
 

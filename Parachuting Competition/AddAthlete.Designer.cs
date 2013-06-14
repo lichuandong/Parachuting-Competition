@@ -97,6 +97,7 @@
             this.textBox_Age.Name = "textBox_Age";
             this.textBox_Age.Size = new System.Drawing.Size(100, 21);
             this.textBox_Age.TabIndex = 17;
+            this.textBox_Age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Age_KeyPress);
             // 
             // textBox_Country
             // 
@@ -125,6 +126,8 @@
             this.textBox_Number.Name = "textBox_Number";
             this.textBox_Number.Size = new System.Drawing.Size(100, 21);
             this.textBox_Number.TabIndex = 15;
+            this.textBox_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Number_KeyPress);
+           
             // 
             // label_Bearer
             // 
@@ -217,9 +220,9 @@
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.label_Team);
             this.Controls.Add(this.label_Number);
+            this.MaximizeBox = false;
             this.Name = "AddAthlete";
-            this.Text = "AddAthlete";
-            this.Load += new System.EventHandler(this.AddAthlete_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

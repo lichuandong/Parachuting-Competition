@@ -13,7 +13,7 @@ namespace Parachuting_Competition
     {
         public delegate void myEvent();//定义委托，用来接收事件
         public event myEvent myevent;//定义与myEvent委托相关的事件
-
+        control.AthleteInfoEntity Cathlete = new control.AthleteInfoEntity();// 一个运动员的对象
         string athleteid = "";
         public AddAthlete(string id)
         {
@@ -53,65 +53,102 @@ namespace Parachuting_Competition
             }
 
         }
+        public bool checkdata()
+        {
 
+            if (textBox_Number.Text.Trim() == "")
+            {
+                MessageBox.Show("编号不能为空，请输入！");
+                textBox_Number.Focus();
+                return false;
+            }
+            else
+            {
+                Cathlete.number = textBox_Number.Text.Trim(); // 满足要求后存入实体中
+            }
+            if (textBox_Team.Text.Trim() == "")
+            {
+                MessageBox.Show("队别不能为空，请输入！");
+                return false;
+            }
+            else {
+
+                Cathlete.team = textBox_Team.Text.Trim();
+            }
+            if (textBox_Name.Text.Trim() == "")
+            {
+                MessageBox.Show("姓名不能为空，请填写！");
+                return false;
+            }
+            else
+            {
+                Cathlete.name = textBox_Name.Text.Trim();
+            }
+            if (textBox_Country.Text.Trim() == "")
+            {
+                MessageBox.Show("国家不能为空，请填写！");
+                return false;
+            }
+            else
+            {
+                Cathlete.country = textBox_Country.Text.Trim();
+            }
+            if (textBox_Age.Text.Trim() == "")
+            {
+                MessageBox.Show("年龄不能为空，请填写！");
+                return false;
+            }
+            else
+            {
+                Cathlete.age = Int32.Parse(textBox_Age.Text);
+            }
+            Cathlete.sex = comboBox_Sex.Text;
+            Cathlete.bearer = comboBox_Bearer.Text;
+            return true;
+
+        }
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            control.AthleteInfoEntity Cathlete = new control.AthleteInfoEntity();
-            string s = textBox_Name.Text.Trim();
 
-            //判空
-            if (textBox_Number.Text.Trim() == "" || textBox_Team.Text.Trim() == "" || textBox_Name.Text.Trim() == ""
-                || textBox_Country.Text.Trim() == "" || textBox_Age.Text.Trim() == "")
+
+            if (checkdata() == true) //所有的验证都是正确的才执行插入或更新
             {
 
-                MessageBox.Show("请将信息填写完整");
-                return;
-            }
-
-            Cathlete.number = textBox_Number.Text;
-            Cathlete.team = textBox_Team.Text;
-            Cathlete.name = textBox_Name.Text;
-            Cathlete.sex = comboBox_Sex.Text;
-            Cathlete.age = Int32.Parse(textBox_Age.Text);
-            Cathlete.country = textBox_Country.Text;
-            Cathlete.bearer = comboBox_Bearer.Text;
-
-            Model.AthleteInfo Mathlete = new Model.AthleteInfo();
-            if (athleteid == "")  // 这是增加的运动员
-            {
-                if (Mathlete.addAthlete(Cathlete) < 0)
+                 Model.AthleteInfo Mathlete = new Model.AthleteInfo();
+                if (athleteid == "")  // 这是增加的运动员
                 {
+                    if (Mathlete.addAthlete(Cathlete) < 0)
+                    {
 
-                    MessageBox.Show("添加失败");
+                        MessageBox.Show("添加失败");
+                    }
                 }
-            }
-            else  // 这是修改后的
-            {
-                if (Mathlete.updataAthlete(Cathlete) > 0)
+                else  // 这是修改后的
                 {
-                    this.Close();
-
+                    if (Mathlete.updataAthlete(Cathlete) > 0)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("修改失败！");
+                    }
                 }
-                else
+
+                textBox_Age.Clear();
+                textBox_Country.Clear();
+                textBox_Name.Clear();
+                textBox_Number.Clear();
+                textBox_Team.Clear();
+
+                //调用添加刷新dataGridView方法之后的事件，利用它间接调用main窗体中的update方法
+                if (myevent != null)
                 {
-                    MessageBox.Show("修改失败！");
+                   myevent();
                 }
+
             }
-
-            textBox_Age.Clear();
-            textBox_Country.Clear();
-            textBox_Name.Clear();
-            textBox_Number.Clear();
-            textBox_Team.Clear();
-
-            //调用添加刷新dataGridView方法之后的事件，利用它间接调用main窗体中的update方法
-            if (myevent != null)
-            {
-
-                myevent();
-            }
-
         }
 
         #region 只能输入数字处理
@@ -138,10 +175,9 @@ namespace Parachuting_Competition
             this.Close();
         }
 
-        private void AddAthlete_Load(object sender, EventArgs e)
-        {
+      
 
-        }
+    
 
 
 
