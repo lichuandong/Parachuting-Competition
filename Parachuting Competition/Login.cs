@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Parachuting_Competition.control;
+using Parachuting_Competition.Entity;
 
 namespace Parachuting_Competition
 {
@@ -21,7 +21,7 @@ namespace Parachuting_Competition
         //登陆按钮点击事件
         private void button_login_Click(object sender, EventArgs e)
         {
-            control.UserEntity cuser = new UserEntity();
+            Entity.UserEntity cuser = new UserEntity();
             cuser.username = textBox_uname.Text;
             cuser.password = textBox_pword.Text;
             Model.User muser = new Model.User();

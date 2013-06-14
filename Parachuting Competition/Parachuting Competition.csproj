@@ -76,7 +76,7 @@
     </Compile>
     <Compile Include="Model\AthleteInfo.cs" />
     <Compile Include="Model\DBoperation.cs" />
-    <Compile Include="Model\PointScroe.cs" />
+    <Compile Include="Model\PointScore.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

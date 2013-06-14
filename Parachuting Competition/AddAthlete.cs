@@ -13,13 +13,13 @@ namespace Parachuting_Competition
     {
         public delegate void myEvent();//定义委托，用来接收事件
         public event myEvent myevent;//定义与myEvent委托相关的事件
-        control.AthleteInfoEntity Cathlete = new control.AthleteInfoEntity();// 一个运动员的对象
+        Entity.AthleteInfoEntity Cathlete = new Entity.AthleteInfoEntity();// 一个运动员的对象
         string athleteid = "";
         public AddAthlete(string id)
         {
             InitializeComponent();// 系统初始化构件
             athleteid = id;
-            if (athleteid != "")
+            if (athleteid != "") // 点击修改后展示原来的数据
             {
                 AthleteInfo ath = new AthleteInfo();
                 DataSet ds = ath.findAthletes(athleteid);
@@ -116,9 +116,10 @@ namespace Parachuting_Competition
             {
 
                  Model.AthleteInfo Mathlete = new Model.AthleteInfo();
+                 Model.PointScore point = new Model.PointScore();
                 if (athleteid == "")  // 这是增加的运动员
                 {
-                    if (Mathlete.addAthlete(Cathlete) < 0)
+                    if (Mathlete.addAthlete(Cathlete) < 0 ||point.addPointMessage(Cathlete)<0)
                     {
 
                         MessageBox.Show("添加失败");

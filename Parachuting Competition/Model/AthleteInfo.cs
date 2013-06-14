@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Data.OleDb;
 using System.Data;
-using Parachuting_Competition.control;
+using Parachuting_Competition.Entity;
 namespace Parachuting_Competition.Model
 {
     class AthleteInfo
     {
         //增加队员信息
-        public int addAthlete(control.AthleteInfoEntity athlete)
+        public int addAthlete(Entity.AthleteInfoEntity athlete)
         {
             //number一定要加[]
             string sql = "insert into AthleteInfo([number],team,athname,sex,age,country,bearer)values(@number,@team,@athname,@sex,@age,@country,@bearer)";
@@ -54,7 +54,7 @@ namespace Parachuting_Competition.Model
             return DBoperation.ParmsQueryDB(sql, parm);
         }
         // 通过队员编号修改对应队员的信息
-        public int updataAthlete(control.AthleteInfoEntity athlete)
+        public int updataAthlete(Entity.AthleteInfoEntity athlete)
         {
             string sql = "update AthleteInfo set team=@team,athname=@athname,sex=@sex,age=@age,country=@country,bearer=@bearer where [number]=@number";
             OleDbParameter[] parms = 

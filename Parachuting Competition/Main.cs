@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Parachuting_Competition.Model;
-using Parachuting_Competition.control;
+using Parachuting_Competition.Entity;
 
 namespace Parachuting_Competition
 {

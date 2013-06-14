@@ -10,7 +10,7 @@ namespace Parachuting_Competition.Model
     class User
     {
         //修改用户
-        public int updateUser(control.UserEntity user)
+        public int updateUser(Entity.UserEntity user)
         {
 
             string sql = "UPDATE Users set Uname='" + user.username + "',Pword='" + user.password + "' where ID=2";
@@ -19,7 +19,7 @@ namespace Parachuting_Competition.Model
         }
 
         //查找用户
-        public bool selectUser(control.UserEntity user)
+        public bool selectUser(Entity.UserEntity user)
         {
 
             string sql = "select * from Users where Uname = @Uname";
@@ -43,9 +43,9 @@ namespace Parachuting_Competition.Model
             return false;
         }
 
-        public control.UserEntity findUser()
+        public Entity.UserEntity findUser()
         {
-            control.UserEntity user = new control.UserEntity();
+            Entity.UserEntity user = new Entity.UserEntity();
             string sql = "select * from Users";
 
             DataSet ds = DBoperation.QueryDB(sql);

@@ -15,12 +15,12 @@ namespace Parachuting_Competition
 
         private void button_change_Click(object sender, EventArgs e)
         {
-            control.UserEntity cuser = new control.UserEntity();
+            Entity.UserEntity cuser = new Entity.UserEntity();
             cuser.username = textBox_uname.Text;
             cuser.password = textBox_pword.Text;
 
             Model.User muser = new Model.User();
-            control.UserEntity beforeUser = muser.findUser();
+            Entity.UserEntity beforeUser = muser.findUser();
 
             if (!cuser.username.Equals(beforeUser.username))
             {
@@ -43,7 +43,7 @@ namespace Parachuting_Competition
                 return;
             }
 
-            control.UserEntity newuser = new control.UserEntity();
+            Entity.UserEntity newuser = new Entity.UserEntity();
             newuser.username = textBox_newuname.Text;
             newuser.password = textBox_newpword.Text;
 

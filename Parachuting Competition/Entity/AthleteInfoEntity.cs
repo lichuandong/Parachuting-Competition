@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Parachuting_Competition.control
+namespace Parachuting_Competition.Entity
 {
     class AthleteInfoEntity
     {
