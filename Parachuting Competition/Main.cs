@@ -150,23 +150,57 @@ namespace Parachuting_Competition
             PointScroeEntity pointscroe = new PointScroeEntity();
             if (checkdata() == true)
             {
-               
+
                 pointscroe.Teamname1 = teamname;
                 pointscroe.Number1 = athnumber;
-               
+                PointScore point = new PointScore();
+                DataSet ds = point.findathletes(pointscroe);
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    Pointdgv.DataSource = ds.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show("没找到数据！");
+                    return;
+                }
+
             }
-            PointScore point = new PointScore();
-            DataSet ds = point.findathletes(pointscroe);
-            if (ds.Tables[0].Rows.Count !=0)
+            else 
             {
-                Pointdgv.DataSource = ds.Tables[0];
-            }
-            else
-            {
-                MessageBox.Show("没找到数据！");
                 return;
             }
+           
           
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
+        private void Pointdgv_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            
+                try
+                {
+                    if (String.IsNullOrEmpty(e.FormattedValue.ToString()))
+                    {
+                    }
+                    else
+                    {
+                        decimal val = decimal.Parse(e.FormattedValue.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                  //  Pointdgv.Rows[e.RowIndex].ErrorText = "必须输入数字";
+                    MessageBox.Show("请输入数字 ");
+                    e.Cancel = true;
+                }
+            
         }
 
        

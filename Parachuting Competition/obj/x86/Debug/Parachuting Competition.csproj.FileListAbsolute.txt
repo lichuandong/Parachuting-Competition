@@ -15,7 +15,6 @@ C:\Documents and Settings\B413\桌面\Parachuting Competition\Parachuting Compet
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe.config
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.exe
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\Parachuting Competition.pdb
-F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\data\Parachuting Competition.accdb
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.exe
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\bin\Debug\Parachuting Competition.pdb
 F:\MicrosoftWorkSpace\Parachuting-Competition\Parachuting Competition\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -69,18 +69,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.clearbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.Pointdgv = new System.Windows.Forms.DataGridView();
-            this.searchbtn = new System.Windows.Forms.Button();
-            this.textBox_number = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_team = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.clearbtn = new System.Windows.Forms.Button();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +86,15 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchbtn = new System.Windows.Forms.Button();
+            this.textBox_number = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_team = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Athlete)).BeginInit();
@@ -333,6 +333,15 @@
             this.tabPage5.Text = "个人定点";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // clearbtn
+            // 
+            this.clearbtn.Location = new System.Drawing.Point(424, 9);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(75, 23);
+            this.clearbtn.TabIndex = 7;
+            this.clearbtn.Text = "清空";
+            this.clearbtn.UseVisualStyleBackColor = true;
+            // 
             // savebtn
             // 
             this.savebtn.Location = new System.Drawing.Point(517, 9);
@@ -341,6 +350,7 @@
             this.savebtn.TabIndex = 6;
             this.savebtn.Text = "保存数据";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // Pointdgv
             // 
@@ -377,98 +387,8 @@
             this.Pointdgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Pointdgv.Size = new System.Drawing.Size(669, 363);
             this.Pointdgv.TabIndex = 5;
-            // 
-            // searchbtn
-            // 
-            this.searchbtn.Location = new System.Drawing.Point(332, 9);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(75, 23);
-            this.searchbtn.TabIndex = 4;
-            this.searchbtn.Text = "查找";
-            this.searchbtn.UseVisualStyleBackColor = true;
-            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
-            // 
-            // textBox_number
-            // 
-            this.textBox_number.Location = new System.Drawing.Point(217, 11);
-            this.textBox_number.Name = "textBox_number";
-            this.textBox_number.Size = new System.Drawing.Size(100, 21);
-            this.textBox_number.TabIndex = 3;
-            this.textBox_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_number_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "队员编号";
-            // 
-            // textBox_team
-            // 
-            this.textBox_team.Location = new System.Drawing.Point(41, 11);
-            this.textBox_team.Name = "textBox_team";
-            this.textBox_team.Size = new System.Drawing.Size(100, 21);
-            this.textBox_team.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "队名";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(669, 422);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "个人特技";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(669, 422);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(104, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(680, 457);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "计算";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(104, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(680, 457);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "打印预览";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // clearbtn
-            // 
-            this.clearbtn.Location = new System.Drawing.Point(424, 9);
-            this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(75, 23);
-            this.clearbtn.TabIndex = 7;
-            this.clearbtn.Text = "清空";
-            this.clearbtn.UseVisualStyleBackColor = true;
+            this.Pointdgv.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.Pointdgv_CellValidating);
+          
             // 
             // Column14
             // 
@@ -597,6 +517,89 @@
             this.Column12.HeaderText = "十轮";
             this.Column12.Name = "Column12";
             this.Column12.ToolTipText = "fds";
+            // 
+            // searchbtn
+            // 
+            this.searchbtn.Location = new System.Drawing.Point(332, 9);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(75, 23);
+            this.searchbtn.TabIndex = 4;
+            this.searchbtn.Text = "查找";
+            this.searchbtn.UseVisualStyleBackColor = true;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
+            // textBox_number
+            // 
+            this.textBox_number.Location = new System.Drawing.Point(217, 11);
+            this.textBox_number.Name = "textBox_number";
+            this.textBox_number.Size = new System.Drawing.Size(100, 21);
+            this.textBox_number.TabIndex = 3;
+            this.textBox_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_number_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(158, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "队员编号";
+            // 
+            // textBox_team
+            // 
+            this.textBox_team.Location = new System.Drawing.Point(41, 11);
+            this.textBox_team.Name = "textBox_team";
+            this.textBox_team.Size = new System.Drawing.Size(100, 21);
+            this.textBox_team.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "队名";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(669, 422);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "个人特技";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(669, 422);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(104, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(680, 457);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "计算";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(104, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(680, 457);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "打印预览";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
