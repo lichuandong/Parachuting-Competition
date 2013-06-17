@@ -165,14 +165,20 @@ namespace Parachuting_Competition
                     return;
                 }
 
+
             }
             else 
             {
                 return;
             }
            
+
+            }
+        
+            
+    
           
-        }
+        
 
         private void savebtn_Click(object sender, EventArgs e)
         {
