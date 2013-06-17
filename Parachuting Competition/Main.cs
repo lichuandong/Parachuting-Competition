@@ -19,6 +19,8 @@ namespace Parachuting_Competition
         }
         //创建运动员对象
         User user = new User();
+        string athnumber = "";
+        string teamname = "";
         private void Main_Load(object sender, EventArgs e)
         {
 
@@ -132,20 +134,39 @@ namespace Parachuting_Competition
 
         }
 
-        private void searchbtn_Click(object sender, EventArgs e)
+        public bool checkdata() // 判断是否输入查询条件
         {
-            string teamname = textBox_team.Text.Trim();
-            string number = textBox_number.Text.Trim();
-            if (teamname == "" && number == "")
+            teamname = textBox_team.Text.Trim();
+            athnumber = textBox_number.Text.Trim();
+            if (teamname == "" && athnumber == "")
             {
                 MessageBox.Show("请至少输入一个查询条件！");
-                return;
+                return false;
+            }
+            return true;
+        }
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            PointScroeEntity pointscroe = new PointScroeEntity();
+            if (checkdata() == true)
+            {
+               
+                pointscroe.Teamname1 = teamname;
+                pointscroe.Number1 = athnumber;
+               
+            }
+            PointScore point = new PointScore();
+            DataSet ds = point.findathletes(pointscroe);
+            if (ds.Tables[0].Rows.Count !=0)
+            {
+                Pointdgv.DataSource = ds.Tables[0];
             }
             else
             {
-                int athleteid = Int32.Parse(number);
-
+                MessageBox.Show("没找到数据！");
+                return;
             }
+          
         }
 
        
