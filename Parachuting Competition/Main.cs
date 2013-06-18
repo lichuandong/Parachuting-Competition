@@ -145,15 +145,17 @@ namespace Parachuting_Competition
             }
             return true;
         }
+        PointScore point = new PointScore();
+        PointScroeEntity pointscroe = new PointScroeEntity();
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            PointScroeEntity pointscroe = new PointScroeEntity();
+          
             if (checkdata() == true)
             {
 
                 pointscroe.Teamname1 = teamname;
                 pointscroe.Number1 = athnumber;
-                PointScore point = new PointScore();
+              
                 DataSet ds = point.findathletes(pointscroe);
                 if (ds.Tables[0].Rows.Count != 0)
                 {
@@ -171,9 +173,7 @@ namespace Parachuting_Competition
             {
                 return;
             }
-           
-
-            }
+       }
         
             
     
@@ -182,7 +182,19 @@ namespace Parachuting_Competition
 
         private void savebtn_Click(object sender, EventArgs e)
         {
-
+          
+             
+               int i= point.updataTable();
+               if (i > 0)
+               {
+                   MessageBox.Show("更新成功！");
+               }
+               else
+               {
+                   MessageBox.Show("更新失败！");
+                   return;
+               }
+            
         }
 
       
@@ -207,6 +219,15 @@ namespace Parachuting_Competition
                     e.Cancel = true;
                 }
             
+        }
+
+        private void clearbtn_Click(object sender, EventArgs e)
+        {
+            //就是重新绑定之前的DataTable,然后清除DataTable中的数据，如下：
+
+            DataTable dt = (DataTable)Pointdgv.DataSource;
+            dt.Rows.Clear();
+            Pointdgv.DataSource = dt; 
         }
 
        

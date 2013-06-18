@@ -84,5 +84,22 @@ namespace Parachuting_Competition.Model
 
             return ds;
         }
+
+        public static int updateTable(string cmdText)
+        {
+           
+            connectionString.Close();
+            connectionString.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = connectionString;
+            cmd.CommandText = cmdText;
+
+           
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            OleDbCommandBuilder com = new OleDbCommandBuilder(da);
+            return da.Update(ds);
+        }
     }
 }

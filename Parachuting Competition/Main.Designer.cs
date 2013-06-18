@@ -341,6 +341,7 @@
             this.clearbtn.TabIndex = 7;
             this.clearbtn.Text = "清空";
             this.clearbtn.UseVisualStyleBackColor = true;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // savebtn
             // 
@@ -388,7 +389,6 @@
             this.Pointdgv.Size = new System.Drawing.Size(669, 363);
             this.Pointdgv.TabIndex = 5;
             this.Pointdgv.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.Pointdgv_CellValidating);
-          
             // 
             // Column14
             // 

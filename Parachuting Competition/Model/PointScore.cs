@@ -26,17 +26,26 @@ namespace Parachuting_Competition.Model
             return DBoperation.ParmsupdateDB(sql, parms);
         }
 
+        public string sql;
         public DataSet findathletes(PointScroeEntity pointentity)
         {
-            string sql = "select * from Fixpoint where Teamname=@Teamname or [Number]=@Number";
+            sql = "select * from Fixpoint where Teamname=@Teamname or [Number]=@Number";
             OleDbParameter[] parms = 
             { 
                new OleDbParameter("Teamname",OleDbType.VarChar),
-                new OleDbParameter("Number",OleDbType.VarChar)
+               new OleDbParameter("Number",OleDbType.VarChar)
             };
             parms[0].Value = pointentity.Teamname1;
             parms[1].Value = pointentity.Number1;
             return DBoperation.ParmsQueryDB(sql, parms);
+        }
+
+        public int updataTable()
+        {
+            sql = "select * from Fixpoint ";
+           
+            return DBoperation.updateTable(sql);
+
         }
     }
 }
